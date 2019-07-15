@@ -1,0 +1,20 @@
+<div [formGroup]="form">
+    <label [attr.for]="field.key">{{field.label}}</label>
+   
+    <div [ngSwitch]="field.controlType">
+   
+      <input *ngSwitchCase="'textbox'" [formControlName]="field.key"
+              [ngStyle]="field.style"
+              [id]="field.id" [type]="field.type">
+   
+      <select [id]="field.id" 
+              *ngSwitchCase="'dropdown'" 
+              [formControlName]="field.key"
+              [ngStyle]="field.style">
+        <option *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</option>
+      </select>
+   
+    </div> 
+   
+    <div class="errorMessage" *ngIf="!isValid">Invalid Form!</div>
+</div>
