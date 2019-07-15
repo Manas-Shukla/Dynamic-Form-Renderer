@@ -1,5 +1,5 @@
-# CustomFormMaker
-
+# Dynamic-Form-Renderer
+Render Reactive Forms in Angular based on its Json definition.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
 ## Development server
